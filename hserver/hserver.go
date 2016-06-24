@@ -18,14 +18,6 @@ type HttpServer struct {
 	location    string
 
 	router      *router.Router
-	//router      map[string]http.HttpHandler
-	//adder       *AddHandler
-	//deleter     *DeleteHandler
-	//reader      *ReadHandler
-
-	//srv_adder   *AddServerHandler
-	//srv_deleter *DeleteServerHandler
-	//srv_reader  *ReadServerHandler
 
 	log         *log.Log
 }
@@ -37,29 +29,6 @@ func InitHttpServer(addr string, log *log.Log) (*HttpServer, error) {
 	hs.log  = log
 
 	hs.router = router.InitRouter(log)
-	//hs.adder = &AddHandler{}
-	//hs.adder.hs = hs
-	//hs.adder.log = log
-
-	//hs.deleter = &DeleteHandler{}
-	//hs.deleter.hs = hs
-	//hs.deleter.log = log
-
-	//hs.reader  = &ReadHandler{}
-	//hs.reader.hs = hs
-	//hs.reader.log = log
-
-	//hs.srv_adder  = &AddServerHandler{}
-	//hs.srv_adder.hs = hs
-	//hs.srv_adder.log = log
-
-	//hs.srv_deleter  = &DeleteServerHandler{}
-	//hs.srv_deleter.hs = hs
-	//hs.srv_deleter.log = log
-
-	//hs.srv_reader  = &ReadServerHandler{}
-	//hs.srv_reader.hs = hs
-	//hs.srv_reader.log = log
 
 	return hs, nil
 }

@@ -15,12 +15,6 @@ type Config struct {
 
 	Location   string  /* handler location */
 
-//	maddr      string  /* mysql addr */
-//	dbname     string  /* db name */
-//	dbuser     string  /* db username */
-//	dbpwd      string  /* db password */
-
-	//goblin_loc string  /* goblin location */
 	Log        string  /* log file */
 	Level      string  /* log level */
 

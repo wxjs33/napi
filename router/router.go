@@ -32,8 +32,6 @@ func (r *Router) AddRouter(url string, handler http.Handler) error {
 func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	if h, ok := r.handlers[req.URL.Path]; ok {
 		h.ServeHTTP(w, req)
-		//http.Error(w, "Method Not Allowed", 405)
-
 	} else {
 		//if r.NotFound != nil {
 		//	r.NotFound.ServeHTTP(w, req)
